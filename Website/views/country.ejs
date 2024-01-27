@@ -1,0 +1,47 @@
+<!-- views/countries.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        select {
+            padding: 8px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select a Country</h1>
+
+    <form action="/filter-cities" method="post">
+        <label for="country">Choose a country:</label>
+        <select id="country" name="country">
+            <option>Select Country</option>
+            <option value="IND">India</option>
+            <option value="CAN">Canada</option>
+            <option value="USA">USA</option>
+            <option value="JPN">Japan</option>
+            <option value="RUS">Russia</option>
+            <option value="AUS">Australia</option>
+            <!-- Add more countries as needed -->
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
