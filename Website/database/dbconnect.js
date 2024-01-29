@@ -13,7 +13,7 @@ mysqlconnection.connect((err)=>{
         console.log("Error Occured"+json.stringify(err));
     }
     else{
-        console.log("connection done port is running on 3302");
+        console.log("connection done port is running on 3002");
     }
 })
 

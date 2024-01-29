@@ -9,7 +9,7 @@ router.get("/cities",(req,resp)=>{
         }
         else{
             console.log("Data retrieved from database : ",data);
-            resp.render('cities', { cities: data });
+            resp.send(data);
         }
     })
 })
@@ -23,10 +23,23 @@ router.post("/filter-cities", (req, res) => {
             res.status(500).send("Error querying the database: " + JSON.stringify(err));
         } else {
             // Render the home page with the filtered cities data and selected country
-            res.render('home', { citiesData: data, selectedCountry });
+            res.render('cities', { citiesData: data, selectedCountry });
         }
     });
 });
+
+router.get('/', (req, res) => {
+    connection.query("SELECT distinct(CountryCode) FROM city;", (error, results) => {
+        if (error) {
+            console.error("Error querying the database: ", error);
+            throw error;
+        }
+
+        console.log("Data retrieved from database: ", results);
+        res.render('home', { data: results });
+    });
+});
+
 
 
 

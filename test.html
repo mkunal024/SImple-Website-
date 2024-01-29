@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <div style="display: flex; gap: 20px;">
+        <div>
+            <!-- Column 1: Addition -->
+            <h2>Addition</h2>
+            <div id="additionResult">
+                <!-- Result will be displayed here -->
+            </div>
+            <button onclick="performAddition()">Reload Addition</button>
+        </div>
+
+        <div>
+            <!-- Column 2: Division -->
+            <h2>Division</h2>
+            <div id="divisionResult">
+                <!-- Result will be displayed here -->
+            </div>
+            <button onclick="performDivision()">Reload Division</button>
+        </div>
+    </div>
+
+    <script>
+        // Mock data for demonstration purposes
+        const additionData = {
+            operand1: 5,
+            operand2: 3
+        };
+
+        const divisionData = {
+            dividend: 10,
+            divisor: 2
+        };
+
+        // Function to perform addition and display the result
+        function performAddition() {
+            const additionResult = document.getElementById('additionResult');
+            
+            // Simulate addition operation
+            const result = additionData.operand1 + additionData.operand2;
+
+            // Display the result on the page
+            additionResult.textContent = `Result: ${result}`;
+        }
+
+        // Function to perform division and display the result
+        function performDivision() {
+            const divisionResult = document.getElementById('divisionResult');
+            
+            // Simulate division operation
+            const result = divisionData.dividend / divisionData.divisor;
+
+            // Display the result on the page
+            divisionResult.textContent = `Result: ${result}`;
+        }
+    </script>
+</body>
+</html>
