@@ -1,0 +1,12 @@
+/* routerComponent.css */
+
+/* Set the height of the router component to 70% of the viewport height */
+.router-component {
+    height: 70vh;
+    margin-top: 15vh; /* Adjust the top margin to accommodate the header */
+    margin-bottom: 15vh; /* Adjust the bottom margin to accommodate the footer */
+    overflow-y: auto; /* Add this property to enable scrolling if needed */
+  }
+  
+  /* Add more styles based on your design requirements */
+  

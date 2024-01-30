@@ -8,8 +8,8 @@ router.get("/cities",(req,resp)=>{
             resp.status(500).send("data not found"+json.stringify(err))
         }
         else{
-            console.log("Data retrieved from database : ",data);
-            resp.send(data);
+         console.log("Data retrieved from database : ",data);
+            //resp.send(data);
         }
     })
 })
@@ -38,7 +38,6 @@ router.get('/', (req, res) => {
             throw error;
         }
 
-        console.log("Data retrieved from database: ", results);
         res.render('home', { data: results });
     });
 });

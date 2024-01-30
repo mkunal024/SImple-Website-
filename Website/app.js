@@ -18,6 +18,7 @@ app.use(bodyparser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyparser.json());
 app.use(favicon(path.join(__dirname, 'images', 'favicon.ico')))
+app.use(express.static('public'));
 
 app.engine('ejs',ejsMate);
 app.set('view engine','ejs');

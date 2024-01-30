@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/home.css">
+    <title>World</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <h1>Welcome to the Home Page</h1>
+        <h1>Select a continent</h1>
+        <% console.log("Value of data in continent.ejs: ", data); %>
+    
+        <form action="/continent" method="get">
+            <label for="continent">Select a continent:</label>
+            <select id="continent" name="continent">
+                <% if (data && data.length > 0) { %>
+                    <% data.forEach(item => { %>
+                        <option value="<%= item.Continent %>"><%= item.Continent %></option>
+                    <% }); %>
+                <% } else { %>
+                    <option value="" disabled>No continent available</option>
+                <% } %>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+
+    <footer>
+        <p>Created by Kunal</p>
+    </footer>
+</body>
+</html>

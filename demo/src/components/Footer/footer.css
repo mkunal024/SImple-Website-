@@ -1,0 +1,51 @@
+/* footer.css */
+
+/* Styles for the social media section */
+.d-flex {
+    display: flex;
+  }
+  
+  .justify-content-center {
+    justify-content: center;
+  }
+  
+  .justify-content-between {
+    justify-content: space-between;
+  }
+  
+  .p-4 {
+    padding: 1rem;
+  }
+  
+  .border-bottom {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Styles for the container section */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-md-start {
+    text-align: left;
+  }
+  
+  /* Add more styles based on your design requirements */
+  /* footer.css */
+
+/* Set the height of the footer to 15% of the viewport height */
+.footer {
+    height: 15vh;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000; /* Set a high z-index to ensure it stays on top of other elements */
+  }
+  
+  /* Add more styles based on your design requirements */
+  

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/country.css"> <!-- Add your CSS file if needed -->
+    <title>Country Data</title>
+</head>
+<body>
+    <h1>Country Data for Continent: <%= selectedContinent %></h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Country Code</th>
+                <th>Country Name</th>
+                <th>Region</th>
+                <th>Surface Area</th>
+                <th>Independence Year</th>
+                <th>Population</th>
+                <th>Life Expectancy</th>
+                <th>GNP</th>
+                <th>GNP Old</th>
+                <th>Local Name</th>
+                <th>Government Form</th>
+                <th>Head of State</th>
+                <th>Capital</th>
+                <th>Country Code (2)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (data && data.length > 0) { %>
+                <% data.forEach(country => { %>
+                    <tr>
+                        <td><a href="/continent/<%= country.Code %>"><%= country.Code %></a></td>
+                        <td><%= country.Name %></td>
+                        <td><%= country.Region %></td>
+                        <td><%= country.SurfaceArea %></td>
+                        <td><%= country.IndepYear %></td>
+                        <td><%= country.Population %></td>
+                        <td><%= country.LifeExpectancy %></td>
+                        <td><%= country.GNP %></td>
+                        <td><%= country.GNPOld %></td>
+                        <td><%= country.LocalName %></td>
+                        <td><%= country.GovernmentForm %></td>
+                        <td><%= country.HeadOfState %></td>
+                        <td><%= country.Capital %></td>
+                        <td><%= country.Code2 %></td>
+                    </tr>
+                <% }); %>
+            <% } else { %>
+                <tr>
+                    <td colspan="14">No data available</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>

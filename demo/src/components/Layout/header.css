@@ -1,0 +1,13 @@
+/* header.css */
+
+/* Set the height of the header to 15% of the viewport height */
+.header {
+    height: 15vh;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(221, 40, 40); /* Add a background color for visibility */
+    z-index: 1000; /* Set a high z-index to ensure it stays on top of other elements */
+  }
+  
+  /* Add more styles based on your design requirements */
+  

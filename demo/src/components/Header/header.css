@@ -1,0 +1,31 @@
+ul{
+    list-style: none;
+    float: right;
+}
+.nav-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#intro-example {
+    height: 600px;
+  }
+  
+  
+  @media (min-width: 992px) {
+    #intro-example {
+      height: 600px;
+    }
+  }
+
+.header {
+  height: 20vh;
+  position: fixed;
+  width: 100%;
+  z-index: 1000; /* Set a high z-index to ensure it stays on top of other elements */
+}
+
+
